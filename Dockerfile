@@ -1,3 +1,3 @@
 FROM node:16
 
-CMD npm install && nodemon --legacy-watch index.js
+CMD npm install && npm start
