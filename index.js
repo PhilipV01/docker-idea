@@ -1,6 +1,10 @@
 'use strict';
 
 const express = require('express');
+// App
+const app = express();
+
+const path = require('path')
 
 // templating engine 'EJS'
 app.set("view engine", "ejs")
@@ -13,8 +17,7 @@ app.use(express.static(path.join(__dirname, "public")))
 const PORT = process.env.PORT;
 const HOST = '0.0.0.0';
 
-// App
-const app = express();
+//routes
 app.get('/', (req, res) => {
   res.render('home');
 });
