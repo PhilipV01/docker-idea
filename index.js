@@ -12,5 +12,9 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+app.get('/info', (req, res) => {
+  res.send(JSON.stringify([1, 2, 3]));
+});
+
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
