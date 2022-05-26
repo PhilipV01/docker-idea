@@ -1,8 +1,9 @@
 # Latest ver. of node alpine 
 FROM node:alpine3.14 
 #WORKDIR 
-#COPY entrypoint.sh /entrypoint.sh
-#RUN chmod +x /entrypoint.sh
+COPY ["package.json", "package-lock.json*", "./"]
+RUN npm install
+RUN npm install express
 #ADD . .
 #RUN npm install
 #ENTRYPOINT ["/entrypoint.sh"]
