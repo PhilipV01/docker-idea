@@ -1,0 +1,26 @@
+#  ## This is docker-compose file for the country-city service 
+# version: "3.7"
+
+# services:
+#   Nodejs/express: # backend/ frontend 
+#     image: node:alpine3.14 
+#     command: sh -c "yarn install && yarn run dev"
+#     ports: 
+#       - "${hostPort}:${port}"
+#     working_dir: /storage/branches/${branch}
+#     volumes:
+#       - ${gitRepoName}-storage:/storage 
+#     #environment: MONGO
+      
+
+#   MongoDB:
+#     image: mongo:latest
+#     volumes:
+#       - ${gitRepoName}-storage:/storage 
+#      #- mongodb-data:/data/db 
+#     environment:
+#      #MONGODB_: 
+#      #MONGODB_: 
+
+# volumes:
+# mongodb-data:
