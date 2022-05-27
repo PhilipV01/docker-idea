@@ -4,11 +4,12 @@ FROM node:alpine3.14
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
 RUN npm install express
+COPY . .
 #ADD . .
 #RUN npm install
-#ENTRYPOINT ["/entrypoint.sh"]
-# npm install express somewhere? 
-CMD npm install && npm run dev 
+#ENTRYPOINT?
+
+CMD npm run dev 
 
 
 
