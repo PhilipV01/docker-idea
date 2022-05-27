@@ -1,16 +1,7 @@
 # Latest ver. of node alpine 
 FROM node:alpine3.14 
-#WORKDIR 
-#COPY ["package.json", "package-lock.json*", "./"]
-#RUN npm install
-#RUN npm install nodaemon 
-#RUN npm install express
-#COPY . .
-#ADD . .
-#RUN npm install
-#ENTRYPOINT?
+#npm install for all and run build/ start for vite
+CMD npm install && npm run build && npm start 
 
-CMD npm install && npm run dev 
-#
 
 
