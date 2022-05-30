@@ -3,24 +3,28 @@
 
  services:
    Nodejs/express: # backend/ frontend 
-     image: node:alpine3.14 
-     command: sh -c "npm install && npm run build && npm start"
+     image: 'nodejs'
+     container_name: 'cityinfo' 
+   # command: sh -c "npm install && npm run build && npm start"
      ports: 
        - "${hostPort}:${port}"
      working_dir: /storage/branches/${branch}
      volumes:
        - ${gitRepoName}-storage:/storage 
-     environment: MONGO
+     environment: MONGO_CONNSTRING=mongodb://${mongoUserName}:${mongoPassword}
       
 
    MongoDB:
-     image: mongo:latest
+     image: 'mongo'
+     container_name: 'db-cityinfo'
+     port: 
+      - "${hostport}:27017"    
      volumes:
        - ${gitRepoName}-storage:/storage 
       #- mongodb-data:/data/db 
      environment:
-      #MONGODB_: 
-      #MONGODB_: 
+      - MONGODB_INITDB_ROOT_USERNAME=${} 
+      - MONGODB_INITDB_ROOT_PASSWORD=${} 
 
  volumes:
  mongodb-data:
