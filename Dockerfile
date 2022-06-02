@@ -4,5 +4,5 @@ FROM mongo:latest
 #ENV MONGO_INITDB_USERNAME:${} 
 #ENV MONG_INITDB_PASSWORD: 
 #PORT 27017
-CMD mongod  
+CMD mongod  && mongod --port="$PORT"
 # && mongod --port "$PORT"
