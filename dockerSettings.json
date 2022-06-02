@@ -3,12 +3,18 @@
   [
     80
   ],
-  "country-city-db",
+
+  "world-map-main",
   [
-    7000
+    4000
   ],
   "country-city-info",
   [
-    6000
+    80
+  ],
+  "app-iframe",
+  [
+    80
+
   ]
 ]
