@@ -2,5 +2,13 @@
   "country-info",
   [
     80
+  ],
+  "country-city-db",
+  [
+    7000
+  ],
+  "country-city-info",
+  [
+    6000
   ]
 ]
