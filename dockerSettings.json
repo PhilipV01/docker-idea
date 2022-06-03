@@ -1,7 +1,14 @@
 [
+  "world-map-main",
+  [
+    4000
+  ],
   "country-info",
   [
-    5001
-
+    4001
+  ],
+  "app-iframe",
+  [
+    4002
   ]
 ]
