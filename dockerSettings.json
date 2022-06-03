@@ -7,15 +7,18 @@
   [
     4001
   ],
-  "country-city-info",
-  [
+  "country-info-db",[
     4002
   ],
-  "country-city-db",[
+  "country-city-info",
+  [
     4003
+  ],
+  "country-city-db",[
+    4004
   ],
   "app-iframe",
   [
-    4004
+    4005
   ]
 ]
