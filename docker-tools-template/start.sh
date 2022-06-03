@@ -48,17 +48,31 @@ docker volume create $REPO_NAME-storage
 # build image from Dockerfile
 docker build -f git-cloner.Dockerfile -t $REPO_NAME-git-cloner .
 
-### run image as container
+### run the git cloner image as container
 docker run \
 --name $REPO_NAME-git-cloner \
 --mount type=bind,source="$DIRNAME/copy-to-docker-container",target=/app \
 -v $REPO_NAME-storage:/storage \
 -e GIT_REPO_URL=$(git remote get-url origin) \
--e GIT_USERNAME=$(git config --global user.name) \
--e GIT_EMAIL=$(git config --global user.email) \
+-e GIT_USERNAME="$(git config --global user.name)" \
+-e GIT_EMAIL="$(git config --global user.email)" \
 -e GIT_REPO_NAME=$REPO_NAME \
 -e GIT_BRANCH_NAME=$BRANCH_NAME \
 $REPO_NAME-git-cloner
+
+### start the syncer container
+### build image from Dockerfile
+docker build -f syncer.Dockerfile -t $REPO_NAME-syncer .
+
+### run the syncer image as container
+echo ""
+echo "Starting syncer!"
+docker run -d \
+--name $REPO_NAME-syncer \
+--mount type=bind,source="$DIRNAME/copy-to-docker-container",target=/app \
+--mount type=bind,source="$REPO_DIR",target=/repo-bind-mount \
+-v $REPO_NAME-storage:/storage \
+$REPO_NAME-syncer
 
 if [ $? -ne 0 ]; then
   # There was an error with git cloner
@@ -84,7 +98,7 @@ echo ""
 ### that runs docker (mounted as a socket)
 ### and docker and docker compose commands inside it
 ### Run docker compose on dynamically created yml file.
-#
+
 ### Important: We mount a unix socket that makes the Docker CLI
 ### in the container use the Docker daemon on the host...
 ### unix sockets must be written with one start slash in MacOS/Linux
@@ -107,19 +121,6 @@ sh -c "cd /storage/branches && export COMPOSE_PROJECT_NAME=$REPO_NAME && docker-
 echo ""
 echo "REMOVING THE CONTAINER $REPO_NAME-composer-runner"
 docker container rm -f $REPO_NAME-composer-runner
-
-### start the currently checked out branch in a container with a bind mount
-### if it has Dockerfile
-cd "$REPO_DIR";
-if [ -f "Dockerfile" ]; then
-  docker build -t $REPO_NAME-bind-mount-$BRANCH_NAME .
-  docker run \
-  --name $REPO_NAME-bind-mount-$BRANCH_NAME \
-  --mount type=bind,source="$REPO_DIR",target=/app \
-  -v $REPO_NAME-storage:/storage \
-  -w /app \
-  $REPO_NAME-bind-mount-$BRANCH_NAME
-fi
 
 ### we are done
 echo ""

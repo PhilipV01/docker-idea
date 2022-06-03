@@ -1,24 +1,7 @@
 [
   "country-info",
   [
-    80
-  ],
+    5001
 
-  "world-map-main",
-  [
-    4000
-  ],
-  "country-city-info",
-  [
-    6000
-  ],
-  "app-iframe",
-  [
-    80
-
-  ],
-  "country-city-db",
-  [
-    7000
   ]
 ]
