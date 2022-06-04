@@ -10,7 +10,7 @@ const {
 } = process.env;
 
 const gitRepoSsh = 'git@github.com:'
-  + gitRepoUrl.split('github.com/')[1];
+  + gitRepoUrl.split(':').join('/').split('github.com/')[1];
 
 const dockerSettings = readAndParseDockerSettings();
 
