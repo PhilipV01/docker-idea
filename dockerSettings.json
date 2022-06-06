@@ -7,18 +7,24 @@
   [
     4001
   ],
-  "country-info-db",[
+  "country-info-db",
+  [
     4002
   ],
   "country-city-info",
   [
     4003
   ],
-  "country-city-db",[
+  "country-city-db",
+  [
     4004
   ],
   "app-iframe",
   [
     4005
+  ],
+  "world-map-main-no-proxy",
+  [
+    4006
   ]
 ]
