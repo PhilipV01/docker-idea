@@ -113,3 +113,5 @@ Create a separate branch with your Dockerfile (and backup like SQL-dumps etc).
 Refer to the documentation about the container you are using (MySQL, MariaDB, MongoDB etc) for how to start the db server on a particular port!
 
 **Important!** If the server/service needs a command line argument rather than an environment variable to set the port it is starting on -  refter to the Docker documentation on how to read environment variables in your Dockerfile and pass them along as comman line arguments in your start CMD!
+
+* This is country-info branch and new data, codes were added on 6 June. 
