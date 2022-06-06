@@ -175,7 +175,15 @@ function buildComposeFile() {
     // the vite developer server gets confused otherwise...
     port = hostPort || port;
 
-    if (fs.existsSync(`/storage/branches/${branch}/Dockerfile`)) {
+    let dfilepath = `/storage/branches/${branch}/Dockerfile`;
+    if (fs.existsSync(dfilepath)) {
+
+      // Replace $PORT in Dockerfile to make it easier to set the
+      // port of the service
+      let a = fs.readFileSync(dfilepath, 'utf-8');
+      a = a.replace(/\$PORT/g, port);
+      fs.writeFileSync(dfilepath, a, 'utf-8');
+
       let name = gitRepoName + '-' + branch;
       let workingDir = `/storage/branches/${branch}`;
       yml = [
