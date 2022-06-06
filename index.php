@@ -1,5 +1,5 @@
 <?php
-    $servername ="docker-idea-clone-country-info-db:4001";
+    $servername ="docker-idea-clone-country-info-db:4002";
     $username = "root";
     $password = "mysql";
     $database = "countries";
