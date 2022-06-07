@@ -11,13 +11,13 @@
   [
     4002
   ],
-  "country-city-db",
-  [
-    4004
-  ],
   "country-city-info",
   [
     4003
+  ],
+  "country-city-db",
+  [
+    4004
   ],
   "app-iframe",
   [
@@ -25,6 +25,14 @@
   ],
   "iframe-reverseproxy",
   [
-    80
+    4006
+  ],
+  "world-map-main-no-proxy",
+  [
+    4007
+  ],
+  "app-iframe-no-reverseproxy",
+  [
+    4008
   ]
 ]
