@@ -24,12 +24,16 @@
   [
     4005
   ],
-  "world-map-main-no-proxy",
+  "iframe-reverseproxy",
   [
     4006
   ],
-  "app-iframe-no-reverseproxy",
+  "world-map-main-no-proxy",
   [
     4007
+  ],
+  "app-iframe-no-reverseproxy",
+  [
+    4008
   ]
 ]
