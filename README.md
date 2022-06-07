@@ -37,6 +37,14 @@ This will give you two shell scripts (that are git-ignored and thus available in
 
 (You will also see a git ignored folder called docker-tools. There is *no need* for you to work in this folder.)
 
+## Teams and Services 
+We have 5 different teams working on this world map app.
+- **Docker** : Taking care of docker tools which enable to create all images (containters) 
+- **World-map** : 
+- **Country-info**:
+- **Capital-info**:
+- **iframe**:
+- **DevOps**: 
 ## In your branch
 
 ### Create a Dockerfile
