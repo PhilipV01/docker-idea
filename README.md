@@ -39,9 +39,12 @@ This will give you two shell scripts (that are git-ignored and thus available in
 
 ## Teams and Services 
 We have 5 different teams working on this world map app.
-- **Docker** : Taking care of docker tools which enable to create all images (containters) 
+- **Docker** : 
+  Taking care of docker tools which enable to create all images (containters) 
 - **World-map** : 
+  Showing a world map which user can click any county on the map 
 - **Country-info**:
+  
 - **Capital-info**:
 - **iframe**:
 - **DevOps**: 
