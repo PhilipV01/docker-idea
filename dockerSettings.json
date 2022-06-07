@@ -1,8 +1,9 @@
-[
-  "world-map-main-no-proxy",
+[ 
+  "world-map-main", 
   [
     4000
-  ],
+  ]
+  ,
   "country-info",
   [
     4001
@@ -19,8 +20,16 @@
   [
     4004
   ],
-  "app-iframe-no-reverseproxy",
+  "app-iframe",
+  [
+    4005
+  ],
+  "world-map-main-no-proxy",
   [
     4006
+  ],
+  "app-iframe-no-reverseproxy",
+  [
+    4007
   ]
 ]
