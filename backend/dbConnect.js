@@ -1,7 +1,7 @@
 const path = require('path');
 const mongoose = require('mongoose');
-
-const connection = 'mongodb://capital-info-db-main:8020/capitals-db';
+// branch name and port number have changed to ours 
+const connection = 'mongodb://country-city-db:4004/capitals-db';
 
 function dbConnectWithRetry() {
   return new Promise(res => {
