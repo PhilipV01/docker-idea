@@ -1,10 +1,7 @@
-FROM mongo:latest
-CMD tail -f /dev/null
-# MongoDB has no enabled access control
-# so probably no need to add environmental variable? 
-#ENV MONGO_INITDB_USERNAME:${} 
-#ENV MONG_INITDB_PASSWORD: 
-#PORT 27017
-#RUN mongod  
-#RUN mongod --port="$PORT"
-# && mongod --port "$PORT"
+FROM mongo:5.0
+### With mongod (the mongo daemon used to start mongoDB)
+### you can specify port, but must also specify a bind_ip
+### (the external ip of the server) OR bind all ip numbers.
+### Since we don't know what ip number Docker assigns the
+### container in Docker's internal network we use bind_ip_all
+CMD mongod --port=$PORT --bind_ip_all
