@@ -58,19 +58,19 @@ We have **8 different branches** to run this application.
 As explained in the later section, each branch will have one image and create a container named as same as the branch name.
 
 Here are those branch names and images that will be used. 
-##### Docker 
+#### Docker 
   - **docker** : Everyone create/run and stop docker containers by running ./start or ./stop in the terminal. 
              No container is created from this branch. 
-##### World-map
+#### World-map
   - **world-map-main**: Uses **Nodejs/express** images for both frontend and backend for world map.
   - **world-map-main-no-proxy**: Uses **Nodejs/express** images as same as world-map-main but this branch is not using reverse-proxy. 
-##### Country-info
+#### Country-info
   - **country-info**: Uses **Php/apache** image as server.
   - **country-info-db**: Uses **MySQL** image as database for handling the information of countries 
-##### Capital-info 
+#### Capital-info 
   - **capital-info**: Uses **Nodejs/express** for backend and frontend with React/Vite
   - **capital-info-db**: Uses **MongoDB** iamge as database for all data of the capital cities.
-##### iframe 
+#### iframe 
   - **app-iframe**: Uses **Nginx** as server and serving html file with iframe to combine other three services.  
   - **app-iframe-no-proxy**: Uses **Nginx** as same as app-iframe and this is not using reverse=proxy 
   - **iframe-reverseproxy**: Uses **Nginx** to set up reverse-proxy. 
