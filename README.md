@@ -47,7 +47,7 @@ We have 5 different teams working on this world map app.
     Shows the information of the selected country
   - **Capital-info**:
     Shows the information of the capital city in the selected country
-    - **iframe**:
+  - **iframe**:
     Combines world map, country info and captal info all together in the same page by using iframe. 
   - **DevOps**: 
     Creates Dockerfiles for containers for each services so developers can create necessary images for each service. 
