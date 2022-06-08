@@ -40,14 +40,19 @@ This will give you two shell scripts (that are git-ignored and thus available in
 ## Teams and Services 
 We have 5 different teams working on this world map app.
 - **Docker** : 
-  Taking care of docker tools which enable to create all images (containters) 
+  Takes care of docker tools which enable to create all images (containters) 
 - **World-map** : 
-  Showing a world map which user can click any county on the map 
+  Shows a world map which user can click any county on the map 
 - **Country-info**:
-  
+  Shows the information of the selected country
 - **Capital-info**:
+  Shows the information of the capital city in the selected country
 - **iframe**:
+  Combines world map, country info and captal info all together in the same page by using iframe. 
 - **DevOps**: 
+  Creates Dockerfiles for containers for each services so developers can create necessary images for each service. 
+  (Build up pipelines for CI/CD for the application)
+  
 ## In your branch
 
 ### Create a Dockerfile
