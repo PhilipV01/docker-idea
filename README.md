@@ -39,20 +39,45 @@ This will give you two shell scripts (that are git-ignored and thus available in
 
 ## Teams and Services 
 We have 5 different teams working on this world map app.
-- **Docker** : 
-  Takes care of docker tools which enable to create all images (containters) 
-- **World-map** : 
-  Shows a world map which user can click any county on the map 
-- **Country-info**:
-  Shows the information of the selected country
-- **Capital-info**:
-  Shows the information of the capital city in the selected country
-- **iframe**:
-  Combines world map, country info and captal info all together in the same page by using iframe. 
-- **DevOps**: 
-  Creates Dockerfiles for containers for each services so developers can create necessary images for each service. 
-  (Build up pipelines for CI/CD for the application)
-  
+  - **Docker** : 
+    Takes care of docker tools which enable to create all images (containters) 
+  - **World-map** : 
+    Shows a world map which user can click any county on the map 
+  - **Country-info**:
+    Shows the information of the selected country
+  - **Capital-info**:
+    Shows the information of the capital city in the selected country
+    - **iframe**:
+    Combines world map, country info and captal info all together in the same page by using iframe. 
+  - **DevOps**: 
+    Creates Dockerfiles for containers for each services so developers can create necessary images for each service. 
+    (Build up pipelines for CI/CD for the application)
+
+## Branches 
+We have **8 different branches** to run this application. 
+As explained in the later section, each branch will have one image and create a container named as same as the branch name.
+
+Here are those branch names and images that will be used. 
+##### Docker 
+  - **docker** : Everyone create/run and stop docker containers by running ./start or ./stop in the terminal. 
+             No container is created from this branch. 
+##### World-map
+  - **world-map-main**: Uses **Nodejs/express** images for both frontend and backend for world map.
+  - **world-map-main-no-proxy**: Uses **Nodejs/express** images as same as world-map-main but this branch is not using reverse-proxy. 
+##### Country-info
+  - **country-info**: Uses **Php/apache** image as server.
+  - **country-info-db**: Uses **MySQL** image as database for handling the information of countries 
+##### Capital-info 
+  - **capital-info**: Uses **Nodejs/express** for backend and frontend with React/Vite
+  - **capital-info-db**: Uses **MongoDB** iamge as database for all data of the capital cities.
+##### iframe 
+  - **app-iframe**: Uses **Nginx** as server and serving html file with iframe to combine other three services.  
+  - **app-iframe-no-proxy**: Uses **Nginx** as same as app-iframe and this is not using reverse=proxy 
+  - **iframe-reverseproxy**: Uses **Nginx** to set up reverse-proxy. 
+
+As explained earlier, each team can create any branches for development or some features.      
+
+
 ## In your branch
 
 ### Create a Dockerfile
