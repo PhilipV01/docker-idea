@@ -1,7 +1,8 @@
-FROM mongo:5.0
-### With mongod (the mongo daemon used to start mongoDB)
-### you can specify port, but must also specify a bind_ip
-### (the external ip of the server) OR bind all ip numbers.
-### Since we don't know what ip number Docker assigns the
-### container in Docker's internal network we use bind_ip_all
-CMD mongod --port=$PORT --bind_ip_all
+FROM bitnami/mysql:5.7.38
+
+### Allow empty password 
+### (= easier connection settings during development)
+ENV ALLOW_EMPTY_PASSWORD=yes
+
+### Set the port to start the MySQL server on
+ENV MYSQL_PORT_NUMBER=$PORT
