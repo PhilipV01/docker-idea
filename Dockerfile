@@ -1,7 +1,5 @@
-# Latest ver. of node lts debian 
-FROM node:lts-bullseye
-#npm install for all and run build/ start for vite
+# start with a debian node container
+FROM node:16.15-buster
+
+# Run necessary start commands
 CMD npm install && npm run dev
-
-
-
