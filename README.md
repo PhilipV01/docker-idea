@@ -1,5 +1,5 @@
-## app-iframe-no-proxy 
-  This branch is **app-iframe-no-proxy** with **Nginx** image.
+## app-iframe-no-proxy-main
+  This branch is **app-iframe-no-proxy-main** with **Nginx** image.
 
 #### Files in this branch 
   - **Dockerfile**: Will create Nginx image which is necessary as server.
