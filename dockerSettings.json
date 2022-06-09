@@ -1,0 +1,30 @@
+[
+  "world-map-main",
+  [
+    4010
+  ],
+  "country-info-main",
+  [
+    4001
+  ],
+  "country-info-db-main",
+  [
+    4002
+  ],
+  "capital-info-main",
+  [
+    4003
+  ],
+  "capital-info-db-main",
+  [
+    8020
+  ],
+  "app-iframe-main",
+  [
+    4005
+  ],
+  "iframe-reverseproxy-main",
+  [
+    4006
+  ]
+]
