@@ -155,7 +155,7 @@ Refer to the documentation about the container you are using (MySQL, MariaDB, Mo
 
 **Important!** If the server/service needs a command line argument rather than an environment variable to set the port it is starting on -  refter to the Docker documentation on how to read environment variables in your Dockerfile and pass them along as comman line arguments in your start CMD!
 
-### Create your container and run app
+### Create your container and run app
 There's three branches you can create containers with running ./start. 
   - **docker** branch: All containers to run the app both with/ withour reverse-proxy can be created. 
   - **app-iframe-no-proxy-main**: All containers to run the app without reverse-proxy can be created.
