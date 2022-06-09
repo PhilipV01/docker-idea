@@ -9,6 +9,7 @@ REPO_DIR="$(dirname "$DIRNAME")"
 
 # Cd to the dir where this script is located
 cd "$DIRNAME"
+#
 
 ### get the name of the repository
 REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
