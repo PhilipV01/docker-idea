@@ -1,5 +1,5 @@
-## iframe-reverseproxy branch 
- This branch is **iframe-reverseproxy** with **Nginx** image. 
+## iframe-reverseproxy-main branch 
+ This branch is **iframe-reverseproxy-main** with **Nginx** image. 
 
 #### Files in this branch
   - **Dockerfile**: Will create Nginx image which we use for setting up reverseproxy.
