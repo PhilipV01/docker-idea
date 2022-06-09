@@ -3,27 +3,27 @@
   [
     4010
   ],
-  "country-info",
+  "country-info-main",
   [
     4001
   ],
-  "country-info-db",
+  "country-info-db-main",
   [
     4002
   ],
-  "capital-info",
+  "capital-info-main",
   [
     4003
   ],
-  "capital-info-db",
+  "capital-info-db-main",
   [
     8020
   ],
-  "app-iframe",
+  "app-iframe-main",
   [
     4005
   ],
-  "iframe-reverseproxy",
+  "iframe-reverseproxy-main",
   [
     4006
   ],
@@ -31,7 +31,7 @@
   [
     4007
   ],
-  "app-iframe-no-proxy",
+  "app-iframe-no-proxy-main",
   [
     4008
   ]
