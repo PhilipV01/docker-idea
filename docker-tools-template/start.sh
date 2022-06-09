@@ -8,7 +8,7 @@ DIRNAME=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 REPO_DIR="$(dirname "$DIRNAME")"
 
 # Cd to the dir where this script is located
-cd $DIRNAME
+cd "$DIRNAME"
 
 ### get the name of the repository
 REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
