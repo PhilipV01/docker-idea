@@ -69,7 +69,7 @@ Here are those branch names and images that will be used.
   - **country-info-db**: Uses **MySQL** image as database for handling the information of countries 
 #### Capital-info 
   - **capital-info**: Uses **Nodejs/express** for backend and frontend with React/Vite
-  - **capital-info-db**: Uses **MongoDB** iamge as database for all data of the capital cities.
+  - **capital-info-db**: Uses **MongoDB** image as database for all data of the capital cities.
 #### iframe 
   - **app-iframe**: Uses **Nginx** as server and serving html file with iframe to combine other three services.  
   - **app-iframe-no-proxy**: Uses **Nginx** as same as app-iframe and this is not using reverse=proxy 
