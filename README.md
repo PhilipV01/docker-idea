@@ -62,11 +62,11 @@ Here are those branch names and images that will be used.
   - **docker** : Everyone create/run and stop docker containers by running ./start or ./stop in the terminal. 
              No container is created from this branch. 
 #### World-map
-  - **world-map-main**: Uses **Nodejs/express** images for both frontend and backend for world map.
-  - **world-map-main-no-proxy**: Uses **Nodejs/express** images as same as world-map-main but this branch is not using reverse-proxy. 
+  - **world-map-main**: Uses **Nodejs/express** for both frontend and backend for world map.
+  - **world-map-main-no-proxy**: Uses **Nodejs/express** as same as world-map-main but this branch is not using reverse-proxy. 
 #### Country-info
-  - **country-info**: Uses **Php/apache** image as server.
-  - **country-info-db**: Uses **MySQL** image as database for handling the information of countries 
+  - **country-info**: Uses **Php/apache** as server.
+  - **country-info-db**: Uses **MySQL** as database for handling the information of countries 
 #### Capital-info 
   - **capital-info**: Uses **Nodejs/express** for backend and frontend with React/Vite
   - **capital-info-db**: Uses **MongoDB** image as database for all data of the capital cities.
