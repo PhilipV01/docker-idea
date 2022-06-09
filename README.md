@@ -65,15 +65,15 @@ Here are those branch names and images that will be used.
   - **world-map-main**: Uses **Nodejs/express** for both frontend and backend for world map.
   - **world-map-main-no-proxy**: Uses **Nodejs/express** as same as world-map-main but this branch is not using reverse-proxy. 
 #### Country-info
-  - **country-info**: Uses **Php/apache** as server.
-  - **country-info-db**: Uses **MySQL** as database for handling the information of countries 
+  - **country-info-main**: Uses **Php/apache** as server.
+  - **country-info-db-main**: Uses **MySQL** as database for handling the information of countries 
 #### Capital-info 
-  - **capital-info**: Uses **Nodejs/express** for backend and frontend with React/Vite
-  - **capital-info-db**: Uses **MongoDB** image as database for all data of the capital cities.
+  - **capital-info-main**: Uses **Nodejs/express** for backend and frontend with React/Vite
+  - **capital-info-db-main**: Uses **MongoDB** image as database for all data of the capital cities.
 #### iframe 
-  - **app-iframe**: Uses **Nginx** as server and serving html file with iframe to combine other three services.  
-  - **app-iframe-no-proxy**: Uses **Nginx** as same as app-iframe and this is not using reverse=proxy 
-  - **iframe-reverseproxy**: Uses **Nginx** to set up reverse-proxy. 
+  - **app-iframe-main**: Uses **Nginx** as server and serving html file with iframe to combine other three services.  
+  - **app-iframe-no-proxy-main**: Uses **Nginx** as same as app-iframe and this is not using reverse=proxy 
+  - **iframe-reverseproxy-main**: Uses **Nginx** to set up reverse-proxy. 
 
 As explained earlier, each team can create any branches for development or some features.      
 
@@ -155,5 +155,11 @@ Refer to the documentation about the container you are using (MySQL, MariaDB, Mo
 
 **Important!** If the server/service needs a command line argument rather than an environment variable to set the port it is starting on -  refter to the Docker documentation on how to read environment variables in your Dockerfile and pass them along as comman line arguments in your start CMD!
 
-* New codes are delivered from team-docker and updated (6 June)
+### Create your container and run app
+There's three branches you can create containers with running ./start. 
+  - **docker** branch: All containers to run the app both with/ withour reverse-proxy can be created. 
+  - **app-iframe-no-proxy-main**: All containers to run the app without reverse-proxy can be created.
+  - **iframe-reverseproxy**: All containers to run the app without reverse-proxy can be created. 
+
+  Have a nice coding! 
 ...............
