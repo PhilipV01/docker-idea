@@ -35,7 +35,7 @@ fi
 
 ## copy dockerSettings.json into the copy-to-docker-folder
 rm copy-to-docker-container/dockerSettings.json
-cp $DOCKER_SETTINGS_FILE copy-to-docker-container/dockerSettings.json
+cp "$DOCKER_SETTINGS_FILE" copy-to-docker-container/dockerSettings.json
 
 echo ""
 echo "CREATING DOCKER VOLUME $REPO_NAME-storage"
