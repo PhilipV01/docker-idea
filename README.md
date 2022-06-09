@@ -1,6 +1,10 @@
-### country-city-db 
-This is conunry-city-db branch which is taking care of database for the infomation of each conutrie's capital. 
+### iframe-reverseproxy branch 
+ This branch is **iframe-reverseproxy** with **Nginx** image. 
 
-### Databse 
-The country-city service uses Mongo DB as database. 
+#### Files in this branch
+  ##### Dockerfile
+  　This is necessary for crating Nginx image which we use for setting up reverseproxy.
+  ##### nginx.conf
+    This is the actual file to set up reverseproxy. 
+
 
