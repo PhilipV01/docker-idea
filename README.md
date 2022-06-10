@@ -2,6 +2,9 @@ Hello developer!
 
 This is a message from your friendly DevOp!
 
+Each branch has own README files and explain the image will be created etc. 
+However, you can always come back here to check the details :)  
+
 ## Exciting times!
 Finally we are moving from a monolith application development model to systems built upon microservices.
 
@@ -159,7 +162,12 @@ Refer to the documentation about the container you are using (MySQL, MariaDB, Mo
 There's three branches you can create containers with running ./start. 
   - **docker** branch: All containers to run the app both with/ withour reverse-proxy can be created. 
   - **app-iframe-no-proxy-main**: All containers to run the app without reverse-proxy can be created.
-  - **iframe-reverseproxy**: All containers to run the app without reverse-proxy can be created. 
+  - **iframe-reverseproxy**: All containers to run the app without reverse-proxy can be created.
 
+### Not sure about Reverse-proxy? 
+If you're not sure how reverse-proxy works and please work and test with **app-iframe-no-proxy-main**, **world-map-main-no-proxy**. That uses localhost + PORT so you don't have anything worry about to play around.
+
+
+...............
   Have a nice coding! 
 ...............
