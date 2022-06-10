@@ -1,8 +1,9 @@
 ## iframe-reverseproxy-main branch 
  This branch is **iframe-reverseproxy-main** with **Nginx** image. 
+ If you'd like to try what you did and create containers without using reverse proxy, please play around here. 
 
 ### Files in this branch
-  - **Dockerfile**: Will create Nginx image which we use for setting up reverseproxy.
+  - **Dockerfile**: Will create Nginx image which we use for setting up reverse proxy.
   - **nginx.conf**: The actual file to set up reverseproxy. 
 
 ### Create container 
