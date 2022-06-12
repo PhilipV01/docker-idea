@@ -1,3 +1,6 @@
+## country-info-main
+This is **country-info-main** branch with **php/apache** image.
+
 For country info development we used PHP and Apache. Apache needs to be set to understand that the container's work directory is its root folder. The port also needs to be set to match the PORT environment variable.
 
 
