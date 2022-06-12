@@ -1,118 +1,28 @@
-Hello developer!
+## world-map-main-no-proxy 
 
-This is a message from your friendly DevOp!
+This is **world-map-main-no-proxy** branch to show the a world map where its possible to click on different contries. We are making a container for the part 'world map' of the application.
+Basically things are same on world-map-main but the application on this branch is not using reverse proxy. 
 
-## Exciting times!
-Finally we are moving from a monolith application development model to systems built upon microservices.
+For Checking the application that if it runs following steps will be helpfull:
 
-This means that we need a new development environment and build system where the teams working in the same main project, but with different services can separate their code and run it on different servers!
+In terminal run following code:
+1. 'npm install'
+2. 'npm run dev'
 
-For this purpose we have chosen Docker in conjunction with our own setup for automating Docker.
-
-We will start with 
-* different teams in teh same main project having the code for their service in specific branches.
-* your team can create as many branches you want, but you start with branching out the main branch and call your base branch "main-service-name".
-* then you can create dev and feature branches according to the same naming convention (dev-service-name, feature-some-feature-service-name etc).
-
-**Note:** Should we need to separate the code further we might move each service into separate repositories. But we will wait with doing that.
-
-## How to get started!
-Checkout the docker branch and run the following command in your terminal:
-
-```
-./create-docker-tools.sh
-```
-
-This will give you two shell scripts (that are git-ignored and thus available in all branches):
-
-```
-# start all Docker containers
-./start
-```
-
-```
-# stop all docker containers
-./stop
-```
-
-(You will also see a git ignored folder called docker-tools. There is *no need* for you to work in this folder.)
-
-## In your branch
-
-### Create a Dockerfile
-Make sure there is: A file named **Dockerfile** which specifies at least:
-* a base image (FROM) 
-* and a command to run (CMD) when the server starts.
-
-Example:
-
-```
-# start with a debian node image
-FROM node:16.15-buster
-
-# run necessary start commands
-CMD npm install && node index
-```
-
-**Important:** - do not specify a WORK DIR. It will be set to where the code for your branch is checked out within Dockers container/named volume systems automatically.
-
-### Create a dockerSettings.json file
-The dockerSettings.json should contain info about which branches you want to create containers from (your own one and other branches with services you want to communicate with) and on which port they should be running:
-
-```json
-[
-  "dev-frontend",
-  [
-    4001
-  ],
-  "main-frontend",
-  [
-    4000
-  ]
-]
-```
-
-**Coming soon:** You will soon be able to add proxy routes for the reverse proxy alongside the port numbers as well!
+Which will run the app locally with port 3000.
 
 
-### Important! Listen to the environment variable PORT when you start your service!
+On other hand  this container can be run from both docker and this branch. To run it for the first time  it requires to go to docker branch and run the following commands:
 
-The system sends an environment variable called PORT to your container (each branch runs in a container that you setup by writing a Dockerfile in your branch).
+1. ./create-docker-tools.sh
+2. ./start
+3. ./stop
 
-Start your service on this port!
+This command  creates a 'start' and 'stop' script in every branch to run the part of the application from it's own branch with a docker-settings.json file. 
 
-### I don't know how to start my service on a specific port
+Important: As this branch is using enviroment variable for the port. So we can choose any port number in the docker-settings file. 
 
-Since you are in control of your microservice and its technology stack it is up to you investigate how to start in on a particular port, but here are some suggestion for technologies we know are going to be used in this project
+Tech stack:
 
-#### React using the Vite development server
-
-In your **config.vite.js** file:
-
-```js
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    // use process.env.PORT
-    // to read the environment variable
-    port: process.env.PORT
-  }
-})
-```
-
-#### Node.js/Express
-
-```js
-// Where you start your Express server
-app.listen(process.env.PORT)
-```
-
-#### For database containers etc
-Create a separate branch with your Dockerfile (and backup like SQL-dumps etc).
-
-Refer to the documentation about the container you are using (MySQL, MariaDB, MongoDB etc) for how to start the db server on a particular port!
-
-**Important!** If the server/service needs a command line argument rather than an environment variable to set the port it is starting on -  refter to the Docker documentation on how to read environment variables in your Dockerfile and pass them along as comman line arguments in your start CMD!
-
-
-* This branch is world-map with no reverse proxy, updated with new codes on 6 June.
+Backend: Node.js/Express,
+Frontend: React with vite
