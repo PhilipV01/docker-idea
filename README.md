@@ -3,9 +3,9 @@ This branch is **capital-info-main** with **Nodejs/Express** image.
 
 #### Folders/files in this branch
 ##### Folders
-    -**backend**: contains **data.json**, **dbConnect.js**,**index.js**
-    -**public/css**: contains **style.css**
-    -**src**:contains **App.jsx**, **main.jsx**
+   - **backend**: contains **data.json**, **dbConnect.js**,**index.js**
+   - **public/css**: contains **style.css**
+   - **src**:contains **App.jsx**, **main.jsx**
 ##### Files
    - **Dockerfile**: will create Nodejs/Express image which serve your backend and fronend files
    - **index.html**
